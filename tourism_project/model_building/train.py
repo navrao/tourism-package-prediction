@@ -81,8 +81,8 @@ with mlflow.start_run(run_name="xgboost-tuning"):
     print(classification_report(ytest, pred_test))
 
     # Save the best model where the app and the workflow expect it
-    os.makedirs("/content/drive/My Drive/Python Course/tourism_project/deployment", exist_ok=True)
-    model_path = "/content/drive/My Drive/Python Course/tourism_project/deployment/model.joblib"
+    os.makedirs("tourism_project/deployment", exist_ok=True)
+    model_path = "tourism_project/deployment/model.joblib"
     joblib.dump(best, model_path)
     mlflow.log_artifact(model_path)
     print("Model saved to", model_path)
