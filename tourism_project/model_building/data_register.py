@@ -1,7 +1,7 @@
 import pandas as pd
 
 #  Load data
-DATA_PATH = "/tourism_project/data/tourism.csv"
+DATA_PATH = "/home/runner/work/tourism-package-prediction/tourism-package-prediction/tourism_project/data/tourism.csv"
 df_original = pd.read_csv(DATA_PATH)
 df = df_original.copy()
 print(f'Shape: {df.shape}')
